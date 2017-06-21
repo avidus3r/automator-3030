@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/DevExpress/testcafe#readme",
   "devDependencies": {
+    "express": "^4.15.3",
     "testcafe": "0.16.0-alpha3"
+  },
+  "dependencies": {
+    "pug": "^2.0.0-rc.2"
   }
 }
