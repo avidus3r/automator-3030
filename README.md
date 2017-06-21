@@ -1,7 +1,7 @@
 # Automator-3030
 
 ## Installation
-``` sh
+``` shell
 npm install
 ```
 
