@@ -1,32 +1,32 @@
 # Automator-3030
 
 ## Installation
-``` shell
+```bash
 npm install
 ```
 
 ## Running the UI
-``` sh
+```bash
 npm start
 ```
 
 ## Running a test in all browsers
-``` sh
+```bash
 testcafe all tests/test.js
 ```
 
 ## Running a test in a specific browser
-``` sh
+```bash
 testcafe chrome tests/test.js
 ```
 
 ## Piping results to a file
-``` sh
+```bash
 testcafe chrome tests/test.js > results.txt
 ```
 
 ## Running on a local project
 _this assumes your project's start cmd is **npm run server**_  
-``` sh
+```bash
 testcafe chrome tests/test.js --app "npm run server" > results.txt
 ```
