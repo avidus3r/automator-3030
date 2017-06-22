@@ -4,6 +4,7 @@
   "description": "Basic TestCafe API example",
   "main": "test.features-and-specs.js",
   "scripts": {
+    "start": "node server.js",
     "test": "testcafe chrome test.features-and-specs.js --app \"npm run server\" --app-inint-delay 10000"
   },
   "repository": {
