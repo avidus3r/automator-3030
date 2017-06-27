@@ -1,8 +1,9 @@
-const http    = require('http'),
-      express = require('express'),
-      path    = require('path')
-      app     = express(),
-      fs      = require('fs');
+const http      = require('http'),
+      express   = require('express'),
+      path      = require('path')
+      app       = express(),
+      fs        = require('fs'),
+      testCafe  = require('testcafe');
 
 let port = process.env.PORT || 3000;
 
@@ -15,6 +16,7 @@ app.get('/', (req, res) => {
   let locals = {
     section: 'home'
   };
+  
   res.render('index', locals);
 });
 

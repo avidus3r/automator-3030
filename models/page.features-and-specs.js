@@ -1,18 +1,16 @@
-import { 
-    Selector,
-    ClientFunction
-} from 'testcafe';
+import { Selector } from 'testcafe';
+import Utils from '../lib/utils';
 
 export default class FeaturesAndSpecsPage {
     constructor () {
         const namespace = 'cd-specs';
         // TODO: this.title.split(' ').forEach((item) => this.url
-        this.componentSelector = Selector(`${namespace}`);
-        this.title          = this.componentSelector.find('h1.page-title');
+        this.componentSelector = Utils.getElement(`${namespace}`);
+        // this.title          = this.componentSelector.find('h1.page-title');
 
-        this.styleSelect        = Selector('#selectStyle');
-        this.styleSelectOption  = this.styleSelect.find('option');
-        this.trimsSelect        = Selector('#selectTrim');
-        this.trimsSelectOption  = this.trimsSelect.find('option');
+        this.styleSelect        = Utils.getElement('#selectStyle');
+        this.styleSelectOption  = Utils.findElement('option', this.styleSelect);
+        this.trimsSelect        = Utils.getElement('#selectTrim');
+        this.trimsSelectOption  = Utils.findElement('option', this.trimsSelect);
     }
 }

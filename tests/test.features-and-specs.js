@@ -1,8 +1,8 @@
-import FeaturesAndSpecs from './page.features-and-specs';
+import FeaturesAndSpecs from '../models/page.features-and-specs';
 import { Selector } from 'testcafe';
-import Utils from './utils';
+import Utils from '../lib/utils';
 
-let remoteUrl = 'http://local.caranddriver.com:3000';
+let remoteUrl = 'http://www.caranddriver.com';
 let path = '/bmw/3-series/specs';
 
 let testUrl = remoteUrl + path;
@@ -39,7 +39,6 @@ test('Global page props', async t => {
         .expect(t.eval(() => document.documentURI)).notEql(docURI)
         .click(page.trimsSelect)
         .click(page.trimsSelectOption.nth(1))
-        .expect(t.eval(() => document.documentURI)).notEql(styleURI)
         .expect(page.trimsSelect.value).notEql(defaultTrim);
 });
 
